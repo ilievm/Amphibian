@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before {  /*reseting document */ 
+    margin: 0;
+    // set -1 if 1st card is going down
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+
+
+    @include r-tab-land {
+        font-size: 56.25%;
+    }
+
+    @include r-tab-port {
+        font-size: 50%;
+    }
+
+    @include r-desktop {
+        font-size: 62.5%;
+    }
+
+    
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}

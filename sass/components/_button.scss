@@ -1,0 +1,108 @@
+.btn{
+
+    &,&:link, btn:visited {
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all 0.2s;         /* animates everythong that changes */
+        position: relative;             /* so sudo elements position absolute will stick to button */
+        font-size: $default-font-size;
+
+        border: none;
+        cursor: pointer;
+    }
+    
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.25);  /*making bottom change shadows for hower over page effect */
+    
+        &::after {         
+            transform: scaleX(1.4) scaleY(1.6);    /* will grow up 1.4 by x and 1.6 by y the size */
+            opacity: 0;
+        }
+    }
+    
+    &:active,&:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.35);
+    
+    }
+    
+    &--white:link, &--white:visited {
+        background-color: $color-white;
+        color: $color-grey-dark;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+    &--white-pop {
+        color: $color-grey-dark;
+        margin-top: -1rem;
+
+        &:hover {
+            color: $color-primary;
+            box-shadow: 0 0.7rem 0.1rem rgba(0, 0, 0, 0.35);
+        }
+
+        &:active {
+            box-shadow: 0 0.4rem 0.1rem rgba(0, 0, 0, 0.35);
+        }
+    }
+
+
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &::after {
+            background-color: $color-primary;
+        }
+    }
+    
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+    
+    
+    &--animated {
+        animation: moveInButton .5s ease-in 0.75s;
+        animation-fill-mode: backwards
+    }
+}
+
+.btn-text {
+    &:link,
+    &:visited {
+        color: $color-primary; 
+        font-size: 1.8rem;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary ;
+        padding: 3px;
+        transition: all 0.2s;
+    }
+
+    &:hover{
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: .3rem 1rem 2rem rgba($color-black, .2);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        box-shadow: .1rem .5rem 1rem rgba($color-black, .2);
+        translate: translate(0);
+    }
+}

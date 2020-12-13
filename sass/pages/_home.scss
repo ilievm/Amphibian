@@ -1,0 +1,77 @@
+body{
+    background-color: $color-grey-light-1;
+}
+
+.section-about {
+    background: rgb(244,244,244);
+    background: linear-gradient(0deg, rgba(244,244,244,1) 33%, rgba(255,255,255,1) 59%);
+    padding: 25vh 0;
+    margin-top: -19vh;
+    margin-bottom: 19rem;
+    box-sizing: content-box;
+
+    @include r-tab-port {
+        margin-bottom: 57rem;
+        padding: 28vh 0;
+
+
+    }
+}
+
+.section-features {
+    margin-top: 18rem;
+    padding: 18rem 0;
+    padding-bottom: 50rem;
+    background-image: linear-gradient(
+        to right bottom,
+         rgba($color-primary-light, 0.745),
+         rgba($color-primary-dark, 0.745)) ,
+         url(../img/newfolderforimg/features.jpg);
+    background-size: cover;
+
+    transform: skewY(-7deg);
+    
+    @include r-tab-port {
+        padding: 10rem 0;
+        margin-top: 65rem;
+        margin-top: -7rem;
+        padding-bottom: 60rem;
+    }
+
+
+    & > * {
+        transform: skewY(7deg);
+
+    }
+}
+
+.section-tours {
+    background-color: $color-grey-light-1;
+    padding: 20rem 0;
+    padding-bottom: 60rem;
+
+    @include r-tab-port {
+        padding: 10rem 0;
+        padding-bottom: 1000px;
+    }
+
+
+}
+
+.section-stories {
+    position: relative;
+    padding: 5rem 0;
+}
+
+.section-book {
+    padding: 15rem;
+    background-image: linear-gradient( $color-primary-light, $color-primary-dark);
+    @include r-tab-port {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+
+
+

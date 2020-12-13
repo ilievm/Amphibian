@@ -1,0 +1,58 @@
+.feature-box {
+    background-color: rgba($color-white, .8);
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem grba($color-black, 0.15);
+    transition: all .3s;
+
+    @include r-tab-port {
+        padding: 1.5rem;
+    }
+
+    &__icon {
+        font-size: 6rem;
+        font-weight: 700;
+        margin-bottom: .5rem;
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+     @include r-tab-port {
+        padding: 1.5rem;
+    }
+    }
+
+    p {
+        color: transparent;
+    }
+
+    h3 {
+        color: white;
+    }
+
+    &:hover {
+        transform: translateY(-1.5rem) scale(1.03);
+    }
+}
+
+.one {
+    background-image: url('../img/newfolderforimg/featone.jpg');
+    background-size: cover;
+}
+
+.two {
+    background-image: url('../img/newfolderforimg/feattwo.jpg');
+    background-size:  cover;
+}
+
+.three {
+    background-image: url('./Amphibian/img/newfolderforimg/featthre.jpg'); 
+    background-size:  cover;
+}
+
+.four {
+    background-image: url('./Amphibian/img/newfolderforimg/featfour.jpg'); 
+    background-size:  cover;
+}
